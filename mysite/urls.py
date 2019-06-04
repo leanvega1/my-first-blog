@@ -18,8 +18,12 @@ from django.conf import settings
 from django.conf.urls import include, url  # For django versions before 2.0
 from django.urls import include, path  # For django versions from 2.0 and up
 
+from django.contrib.auth import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/login/', views.LoginView.as_view(), name='login'),
+    path('accounts/logout/', views.LogoutView.as_view(next_page='/'), name='logout'),
     path('', include('blog.urls')),
 ]
 
