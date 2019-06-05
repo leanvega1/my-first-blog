@@ -86,10 +86,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'djangogirls',
-	'USER': 'name',
-	'PASSWORD': '',
-	'HOST': 'localhost',
-	'PORT': '',
+	    'USER': 'name',
+	    'PASSWORD': '',
+	    'HOST': 'localhost',
+	    'PORT': '',
     }
 }
 
@@ -140,5 +140,5 @@ INTERNAL_IPS = '127.0.0.1'
 
 LOGIN_REDIRECT_URL = '/'
 
-db_form_env = dj_database_url.config(conn_max_age=500)
+db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
